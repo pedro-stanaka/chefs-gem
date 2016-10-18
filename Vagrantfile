@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.hostname = 'chefs-gem-berkshelf'
+  config.vm.hostname = 'chefs-gem'
 
   config.vm.boot_timeout = 180
 

@@ -7,5 +7,5 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'chefs-gem::user'
 include_recipe "chefs-gem::bootstraping"
+include_recipe 'chefs-gem::user'

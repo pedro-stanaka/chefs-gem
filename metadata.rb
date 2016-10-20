@@ -20,3 +20,7 @@ depends 'curl'
 depends 'zlib'
 depends 'lxmx_oh_my_zsh', '~> 0.5.0'
 depends 'tmux', '~> 1.5.0'
+depends 'nodejs', '~> 2.4.4'
+
+# Ruby
+depends 'rvm', '~> 0.9.4'

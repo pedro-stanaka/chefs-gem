@@ -81,7 +81,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
 
     chef.run_list = [
-      'recipe[chefs-gem::default]'
+      'recipe[chefs_gem::default]'
     ]
   end
 end

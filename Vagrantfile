@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.boot_timeout = 180
 
   if Vagrant.has_plugin?("vagrant-omnibus")
-    config.omnibus.chef_version = 'latest'
+    config.omnibus.chef_version = :latest
   end
 
   # Every Vagrant virtual environment requires a box to build off of.
@@ -34,6 +34,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -51,6 +52,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
      vb.customize ["modifyvm", :id, "--memory", "1024"]
+     vb.cpus = 2
   end
   #
   # View the documentation for the provider you're using for more

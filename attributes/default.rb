@@ -68,7 +68,8 @@ default['rvm']['user_installs'] = [
       { 'name'    => 'bundler' },
       { 'name'    => 'rake' },
       { 'name'    => 'sass' },
-      { 'name'    => 'capistrano' }
+      { 'name'    => 'capistrano' },
+      { 'name'    => 'rails' }
     ]
   }
 ]

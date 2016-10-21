@@ -26,3 +26,15 @@ lxmx_oh_my_zsh_user 'vagrant' do
   autocorrect    false
   case_sensitive true
 end
+
+
+['vagrant', node['chefs_gem']['user']].each do |u|
+  file 'gemrc' do
+    action :create
+    content 'gem: --no-rdoc --no-ri'
+    path "/home/#{u}/.gemrc"
+    owner u
+    group u
+    mode '0744'
+  end
+end
